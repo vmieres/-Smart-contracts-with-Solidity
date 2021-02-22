@@ -1,4 +1,5 @@
 # **Smart Contracts with Solidity**
+![](https://miro.medium.com/max/2410/1*xIzdc_FVszgB3cCaqMd5ZQ.png)
 
 This repo is about building smart contracts to automate some company finances to make everyone's lives easier, increase transparency, and to make accounting and auditing practically automatic! To streamline the operation.
 These ProfitSplitter contracts will:
