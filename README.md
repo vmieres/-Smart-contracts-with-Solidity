@@ -25,16 +25,34 @@ While developing and testing contract, I used the Ganache development chain, and
 **Level One:** 
 
 The AssociateProfitSplitter Contract
-![](snap_shots/Associate_Profit_Splitter.png)
+![](screenshots_testnet/Transaction_1.png)
+
+In the Deploy tab in Remix, I deployed the contract to my local Ganache chain addresses by connecting to Injected Web3 and ensuring MetaMask is pointed to localhost:8545.
+
+In the constructor parameters I designated the employee addresses.
+
+![](screenshots_testnet/accounts_before1.png)
+
+Because I used the same account to be debited and the first account to be credited, in the first address we can see the sum of 37.46 from 44.12. After sending 10 ETH equally distributed to the first 3 adressess. 
+
+![](screenshots_testnet/accounts_after1.png)
 
 
 **Level Two**:
 
-Tiered ProfitSplitter Contract
+Tiered ProfitSplitter Contract.
 
 Here, rather than splitting the profits between Associate-level employees, we calculate rudimentary percentages for different tiers of employees (CEO, CTO, and Bob).
-![](snap_shots/Tiered_Profit_Splitter.png)
 
+![](screenshots_testnet/Transaction_2.png)
+
+For the level two contract I used the split 60, 25 and 15 percent for the accounts. 
+
+![](screenshots_testnet/accounts_before2.png)
+
+So after transferring 10 ether we have:
+
+![](screenshots_testnet/accounts_after2.png)
 
 **Level Three**
 
@@ -50,7 +68,8 @@ In this contract, we will be managing an employee's "deferred equity incentive p
 
 
   - Specific vesting periods, the dollar/crypto value of shares awarded, and the percentage equity stake (the percentage ownership of the company) all tend to vary according to the company, the specialized skills, or seniority of the employee, and the negotiating positions of the employee/company. If you receive an offer from a company offering equity (which is great!), just make sure you can clarify the current dollar value of those shares being offered (based on, perhaps, valuation implied by the most recent outside funding round). In other words, don’t be content with just receiving “X” number of shares without having a credible sense of what amount of dollars that “X” number represents. Be sure to understand your vesting schedule as well, particularly if you think you may not stick around for an extended period of time.
-  ![](snap_shots/Deferred_Equity_Plan.png)
+  
+![](screenshots_testnet/Transaction_3.png)
 
 **Deploy the contracts to a live Testnet - Ropsten network**
 
@@ -58,8 +77,21 @@ I switched my MetaMask to the Ropsten network. I had 5 test Ether on this networ
 
 After switching MetaMask to Ropsten network, deploy the contracts as before and copy/keep a note of their deployed addresses. The transactions will also be in your MetaMask history, and on the blockchain permanently to explore later.
 
+![](screenshot_kovan/transaction_1.png)
+
+**contract_1 address**
+0x0a1d6c8b9e364eb1c1ed79d4d0f671dc6e651acb
+ 
+**contract_2 address**
+0xe44f3592c3143aa0163a960a678ff378ac3d1b12
+ 
+**contract_3_address**
+0x7bd6dcd322d506a6ce2ad62268bb6bf59985ce80
+
+
 ### **Resources**
 - Tutorial [EthereumDev.io](https://ethereumdev.io/)
 - Code snips [Solidity by example](https://github.com/raineorshine/solidity-by-example)
 - Building games [CryptoZombies](https://cryptozombies.io/
 )
+
