@@ -2,6 +2,7 @@ pragma solidity ^0.5.0;
 
 // lvl 3: equity plan
 contract DeferredEquityPlan {
+    uint fakenow = now;
     address human_resources;
 
     address payable employee; // bob
@@ -27,9 +28,9 @@ contract DeferredEquityPlan {
 
     
     
-    //function fastforward() public {
-    //    fakenow += 100 days;
-    //}
+     function fastforward() public {
+        fakenow += 100 days;
+    }
     
     
     
@@ -40,7 +41,7 @@ contract DeferredEquityPlan {
         // @TODO: Add "require" statements to enforce that:
         
         // 1: `unlock_time` is less than or equal to `now`
-        require(unlock_time <= now, "Shares can noot be distributed at this time.");
+        require(unlock_time <= fakenow, "Shares can noot be distributed at this time.");
         
         //2: "distributed_shares" is less than the "total_shares
         require(distributed_shares <= total_shares, "No shares left to be distributed");
@@ -53,7 +54,7 @@ contract DeferredEquityPlan {
         // @TODO: Calculate the shares distributed by using the function (now - start_time) / 365 days * the annual distribution
         // Make sure to include the parenthesis around (now - start_time) to get accurate results!
         // Your code here!
-        distributed_shares = ((now - start_time) / 365 days * annual_distribution);
+        distributed_shares = ((fakenow - start_time) / 365 days * annual_distribution);
         
         // double check in case the employee does not cash out until after 5+ years
         if (distributed_shares > 1000) {
