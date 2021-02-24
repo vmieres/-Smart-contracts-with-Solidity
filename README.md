@@ -18,7 +18,9 @@ This assignment has 3 levels of difficulty, with each contract increasing in com
 - *Level Three* is a DeferredEquityPlan that models traditional company stock plans. This contract will automatically manage 1000 shares with an annual distribution of 250 over 4 years for a single employee.
 
 ## **Starting the project:**
-Using Remix IDE to create a new contract called AssociateProfitSplitter.sol 
+Using Remix IDE to create a new contract called 
+
+AssociateProfitSplitter.sol 
 
 While developing and testing contract, I used the Ganache development chain, and point MetaMask to localhost:8545, or replace the port with what I have set on workspace.
 
